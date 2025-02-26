@@ -1,0 +1,149 @@
+.site-footer {
+    background: $green;
+    color: white;
+    padding: 55px 0px 40px 0px;
+
+    .title {
+        font-family: $defaultfont;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    //Quick Link Container
+    .quick-link-container {
+        .menu {
+            margin: 0px;    
+            padding: 0px;
+            list-style-type: none;
+            li {
+                margin-bottom: 1rem;
+
+                a { 
+                    font-size: 18px;
+                    color: white;
+                    text-decoration: none;
+                    margin-bottom: 1rem;
+                    &:hover {  
+                        color: $orange;
+                    }
+                }
+            }
+        } 
+    }
+
+
+    //Contact Info
+    .contact-info {
+        ul {
+            margin: 0 0 1rem 0;    
+            padding: 0px;
+            list-style-type: none;
+            li {
+                margin-bottom: 1rem;
+                font-size: 18px;
+                a {
+                    color: white;
+                    text-decoration: none;
+                    &:hover {
+                        color: $orange;
+                    }
+                }
+            }
+        }
+        .btn.link {
+            color: white !important;
+            &:after {
+                background-image: url("../images/arrow-link-white.svg");
+            }
+        }
+    }
+
+    //Footer Form
+    .footer-form-container {
+        @media(max-width: 992px){
+            padding-top: 2rem;
+        }
+
+        .forminator-custom-form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+
+            > .forminator-row {
+                .forminator-field-name {
+                    .forminator-row {
+                        display: flex;
+                        gap: 10px;
+                        .forminator-col {
+                            margin: 0px;
+                        }
+                    }
+                }
+            }
+            .forminator-field {
+                display: flex;
+                flex-direction: column;
+                .forminator-input {
+                    border-radius: 0px;
+                    height: 42px;
+                    padding: 1rem;
+                    width: 100%;
+                }
+                .forminator-error-message {
+                    background: $orange;
+                    padding: 1rem;
+                }
+
+                .forminator-button {
+                    border: none;
+                }
+            }
+            > .forminator-row:not(.forminator-row-last) {
+                width: 100%;
+            }
+            .forminator-success {
+                width: 100%;
+                position: absolute;
+                background: $green;
+                top: 100%;
+                padding: 10px;
+            }
+            @media(max-width: 992px){
+                flex-direction: column;
+            }
+        }
+ 
+        .btn {
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+    }
+
+    //Lower Bar
+    .footer-bottom-bar {
+        padding-top: 50px;
+        
+        .social-media {
+            text-align: right;
+        }
+
+        .site-branding {
+            img {
+                height: 100px;
+            }
+        }
+
+        @media(max-width: 992px){
+            .site-branding {
+                text-align: center;
+            }
+            .social-media {
+                margin-top: 2rem;
+                text-align: center;
+            }
+        }
+    }
+} 

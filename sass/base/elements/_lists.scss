@@ -1,0 +1,58 @@
+ul,
+ol {
+	margin: 0 0 1.5em 0;
+	padding: 0 0 0 2rem;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	// list-style: decimal;
+    list-style-type: none;
+	margin: 2rem 0rem;
+
+	li{
+		display: flex;
+		align-items: center;
+		position: relative;
+		margin-bottom: 1.5rem;
+		counter-increment: coutner;
+		&::marker{
+			color: white;
+		}
+		&:before {
+			content: counter(coutner);
+			position: relative;
+			left: -1rem;
+			background: $orange;
+			z-index: -1;
+			border-radius: 50%;
+			padding: 15px;
+			line-height: .6;
+			color: white;
+			font-weight: 600;
+			font-size: 20px;
+			height: 2.5rem;
+			width: 2.5rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}

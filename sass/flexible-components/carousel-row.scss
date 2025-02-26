@@ -1,0 +1,83 @@
+.carousel-row {
+    margin: 5rem 0rem;
+    .title {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .imageCarousel {
+        .swiper-slide {
+            > img {
+                width: 100%;
+            }
+        }
+        &.swiper {
+            height: auto;
+        }
+
+        //Make images cover
+        &.imageCover {
+            .swiper-slide {
+                > img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        
+    }
+
+    //Logo Carousel 
+    &.logo-carousel {
+        .image-carousel {
+            position: relative;
+            .swiper-button-prev.button-prev {
+                left: -5%;
+                @media (max-width: 650px){
+                    left: 0%;
+                }
+            }
+            .swiper-button-next.button-next { 
+                right: -5%;
+                @media (max-width: 650px){
+                    right: 0%;
+                }
+            }
+
+            .swiper-button-prev.button-prev, .swiper-button-next.button-next {
+                background: $pink; 
+                &:hover {
+                    background: $green;
+                }
+            }
+            .logoCarousel {
+                &.swiper {
+                    height: auto;
+                }
+                .swiper-slide {
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        max-width: 220px;
+                        @media (max-width: 756px){
+                            padding: 0px 10%;
+                            width: 100%;
+                        }
+                        &.grayscale {
+                            filter: grayscale(1);
+                            transition: all .3s;
+                            &:hover {
+                                filter: grayscale(0);
+                            }
+                        } 
+
+                    }
+
+                }
+               
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+#countdown-timer-section {
+    max-width: 860px;
+    margin: 3rem auto;
+    padding: 0px 5%;
+    .countdown-timer {
+        display: flex;
+        gap: 10px;
+        font-size: 24px;
+        padding: 10px;
+        border-radius: 6px;
+        margin-top: 10px;
+        justify-content: center;
+        color: $purple;
+        line-height: 1;
+        flex-wrap: wrap;
+    }
+    .countdown-timer span {
+        font-weight: bold;
+    }
+    .content {
+        color: $purple;
+    }
+}

@@ -1,0 +1,7 @@
+.button-row {
+  text-align: center;
+  color: white;
+}
+.button-row .btn {
+  padding: 10px 20px;
+}

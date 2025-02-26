@@ -1,0 +1,44 @@
+.accordion-container {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.accordion-container .accordion button.accordion-button {
+  padding: 20px 20px 20px 70px;
+  margin-bottom: 5px;
+}
+.accordion-container .accordion button.accordion-button:focus {
+  outline: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.accordion-container .accordion button.accordion-button.collapsed::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.accordion-container .accordion button.accordion-button::after {
+  background-image: url("../images/plus.svg");
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: 20px;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  background-size: contain;
+}
+.accordion-container .accordion button.accordion-button:hover {
+  cursor: pointer;
+}
+.accordion-container .accordion button.accordion-button .title {
+  margin: 0px;
+  font-size: 25px;
+}
+.accordion-container .accordion .accordion-body {
+  padding: 20px;
+}
+
+.accordion-item {
+  -webkit-transition: height 0.5s, opacity 0.3s linear 0.3s;
+  transition: height 0.5s, opacity 0.3s linear 0.3s;
+  border-bottom: 1px solid black !important;
+}

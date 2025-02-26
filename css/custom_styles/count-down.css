@@ -1,0 +1,19 @@
+.countdown-timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.countdown-timer span {
+  font-weight: bold;
+  color: #0073aa;
+}

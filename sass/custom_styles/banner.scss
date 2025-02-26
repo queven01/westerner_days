@@ -1,0 +1,88 @@
+.banner {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    .content {
+        z-index: 3;
+    }
+
+    .title {
+        font-size: 2.063rem;
+        line-height: 1.4;
+        text-shadow: 0px 0px 2px black;
+    }
+
+    &:before {
+        content: "";
+        inset: 0;
+        background: black;
+        position: absolute;
+        opacity: 0.4;
+        z-index: 1;
+    }
+
+    
+    &.home {
+        height: 700px;
+ 
+        .hero-blocks {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            width: 35%;
+            @media(max-width: 992px) {
+                width: 55%;
+            }
+            @media(max-width: 750px) {
+                width: 75%;
+            }
+        }
+
+        video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    // Inner Banner
+    &.inner {
+        height: 400px;
+        display: flex;
+        align-items: flex-end;
+
+        .hero-blocks {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            opacity: .5;
+            z-index: 2;
+            @media(max-width: 992px) {
+                width: 85%;
+            }
+        }
+
+        .title {
+            font-size: 3.313rem;
+            text-transform: uppercase;
+            line-height: 1;
+            text-shadow: 1px 2px 6px #00000073;
+            margin-bottom: 4rem;
+
+            @media(max-width: 992px){
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .content {
+        color: white;
+        position: relative;
+    }
+}

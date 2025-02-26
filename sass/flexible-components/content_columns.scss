@@ -1,0 +1,30 @@
+.content-column {
+    margin: 4rem 0rem;
+    .row {
+        justify-content: space-between;
+    }
+    .title-container {
+        .top-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }  
+        .sub-title {
+            background: $blue;
+            color: white;
+            padding: 1rem;
+        }
+    }
+    .single-column {
+        max-width: 835px;
+        margin: 0 auto;
+    }
+    &.add_bg {
+        background: #f5f5f5;
+        padding: 5rem 0rem;
+    }
+    .content-side {
+        &.two {
+            margin-top: 32px;
+        }
+    }
+}

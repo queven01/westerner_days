@@ -1,0 +1,21 @@
+.link_row {
+    margin: 5rem 0rem;
+    .title {
+        margin-bottom: 2rem;
+    }
+    .row {
+        a {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    
+    .link_container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        a.btn {
+            width: auto;
+        }
+    }
+}

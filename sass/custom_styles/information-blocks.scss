@@ -1,0 +1,22 @@
+.information-blocks-row {
+    margin: 3rem 0rem;
+    .row-item {
+        margin-bottom: 2rem;
+        .block {
+            box-shadow: 0px 2px 20px 0px #00000038;
+            padding: 2.5rem;
+            height: 100%;
+            .content {
+                margin-bottom: 15px;
+                .title {
+                    margin: 0px 0px 10px 0px;
+                    display: inline;
+                }
+                .description {
+                    margin: 0px 0px 10px 0px;
+                    display: inline;
+                }
+            }
+        }
+    }
+}

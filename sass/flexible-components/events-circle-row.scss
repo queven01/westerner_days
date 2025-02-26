@@ -1,0 +1,44 @@
+.events-circle-row {
+    margin: 5rem 0rem;
+    .event-circle-container {
+        .title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .event-circle {
+            text-align: center;
+            margin-bottom: 3rem;
+            .event-item {
+                margin-bottom: 2rem;
+                
+                a {
+                    display: inline-block;
+                    text-decoration: none;
+                    figure {
+                        width: 205px;
+                        height: 205px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            transition: all .3s;
+                        }
+                    }
+    
+                    .event-name {
+                        margin-top: 1rem;
+                    }
+    
+                    &:hover {
+                        color: $green;
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                } 
+            }
+        }
+    }
+}

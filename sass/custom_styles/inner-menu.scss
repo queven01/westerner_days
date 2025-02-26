@@ -1,0 +1,30 @@
+.inner-menu {
+    .posts-inner-menu {
+        text-align: left;
+        background: $green;
+
+        @media(max-width: 992px){
+            overflow: scroll;
+        }
+
+        .bigger-container {
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+    }
+}
+
+#event-pagination-nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0rem 0rem 0rem;
+    padding: 0;
+    
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 18px;
+    }
+}

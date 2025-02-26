@@ -1,0 +1,7 @@
+.contact-page .specific_inquiries .inquiries {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 16px auto;
+  grid-template-columns: auto auto;
+  gap: 16px;
+}

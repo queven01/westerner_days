@@ -1,0 +1,39 @@
+.sponsor-row {
+    margin: 5rem 0;
+    h2 {
+        text-align: center;
+    }
+    .sponsor-container {
+        border: none;
+
+        .title {
+            border-bottom: 1px solid $blue;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+.sponsor-container {
+    margin-top: 1rem;
+    border-top: 1px solid $blue;
+    .sponsor-logos {
+        display: flex;
+        flex-wrap: wrap;
+        a {
+            display: flex;
+            align-items: center;
+            margin-right: 20px; 
+            transition: all .3s;
+            filter: grayscale(1);
+            img {
+                height: 150px;
+                object-fit: contain;
+                width: 220px;
+                object-position: center;
+            }
+            &:hover {
+                filter: grayscale(0);
+            }
+        }
+    }
+}

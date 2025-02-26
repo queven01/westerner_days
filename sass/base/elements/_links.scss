@@ -1,0 +1,203 @@
+a {
+    transition: all .3s;
+	color: $color__link;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+a.btn {
+    color: white; 
+}
+.btn {
+    font-family: $defaultfont;
+    font-weight: 400;
+    padding: 12px 22px;
+    text-decoration: none;
+    background: $blue;   
+
+    display: inline-block;
+    text-transform: uppercase;
+    @media(max-width: 992px){
+        font-size: 13px;
+    }
+    &.link {
+        padding: 0px;
+        background: none;
+        color: $blue;
+        font-family: $secondaryFont;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        line-height: 1.1;
+        &:after {
+            content: "";
+            background-image: url("../images/arrow-link.svg");
+            background-position: center;
+            background-size:contain;
+            background-repeat: no-repeat;
+            width: 23px;
+            height: 13px;        
+            display: inline-block;
+            position: relative;
+            transition: all .3s;
+            left: 0;
+            top: -1px;
+        }
+        &.reverse {
+            &:before {
+                content: "";
+                background-image: url("../images/arrow-link.svg");
+                background-position: center;
+                background-size:contain;
+                background-repeat: no-repeat;
+                width: 23px;
+                height: 13px;        
+                display: inline-block;
+                position: relative;
+                transition: all .3s;
+                left: 0;
+                top: -1px;
+                transform: rotate(180deg);
+            }
+            &:after {
+                display: none;
+            }
+        }
+        &:hover {
+            color: $green;
+            &:after {
+                left: 4px;
+            }
+            &:before {
+                left: -4px;
+            }
+        }
+    }
+    
+    //Nav Button
+    a {
+        color: white !important;
+        padding: 10px 10px !important;
+        display: inline-block;
+        text-align: center;
+        border: none;
+
+        &:hover {
+            background: $pink;
+        }
+    }
+
+    //Hovers
+    transition: all .2s;
+    &.orange {
+        background:$orange;
+        &:hover {
+            background: #b56f30;
+        }
+    }
+    &.light-green {
+        background:$light-green;
+        &:hover {
+            background: #918d4d;
+        }
+    }
+    &.green {
+        background:$green;
+        &:hover {
+            background: #24584b;
+        }
+    }
+    &.white {
+        background: rgb(230, 224, 224);
+        color: $blue;
+        &:hover {
+            background:$blue;
+            color: white;
+        }
+    }
+    &.dark-green {
+        background:$pink;
+        &:hover {
+            background: #529b88;
+        }
+    }
+    &.blue {
+        background:$blue;
+        &:hover {
+            background: #2f85a1;
+        }
+    }
+    &.purple {
+        background:$purple;
+        &:hover {
+            background: darken($purple, 9%);
+        }
+    }
+    &.pink {
+        background:$pink;
+        &:hover {
+            background: darken($pink, 9%);
+        }
+    }
+    //Button on Navigation
+    &.menu-item {
+        margin-top: 1rem;
+    }
+
+    &.btn-small {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+.forminator-button.btn {
+    &.blue {
+        background:$blue !important;
+        padding: 12px 22px !important;
+        font-weight: 400 !important;
+        font-size: 18px !important;
+        &:hover {
+            background: #2f85a1 !important;
+        }
+    }
+}
+
+.floating-button-container {
+    position: absolute;
+    z-index: 999;
+    > a {
+        position: fixed;
+        right: 0;
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform-origin: top right;
+        @media(max-width: 992px){
+            padding: 5px 20px;
+        }
+
+        &.one {
+            bottom: 15rem;
+            @media(max-width: 992px){
+                bottom: 13rem;
+            }
+        }
+        &.two {
+            bottom: 5rem;
+        }
+    }
+}

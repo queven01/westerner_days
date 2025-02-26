@@ -1,0 +1,14 @@
+.job-row {
+  margin: 5rem 0rem;
+}
+.job-row h2 {
+  text-align: center;
+}
+.job-row .job-content {
+  padding-bottom: 3rem;
+  margin: 3rem 0;
+  border-bottom: 1px solid black;
+}
+.job-row .job-content p {
+  margin: 0px;
+}

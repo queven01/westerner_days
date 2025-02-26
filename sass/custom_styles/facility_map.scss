@@ -1,0 +1,198 @@
+.facility-map-section {
+    margin: 3rem 0px;
+
+    .nav-pills {
+        width: 200px;
+    }
+    .nav-link {
+        width: 100%;
+        border: none;
+        border-radius: 0px;
+        padding: 1rem 0.5rem;
+        margin-bottom: 10px;
+        transition: all .3s;
+        &:hover {
+            background: $pink;
+            color: white;
+            cursor: pointer;
+        }
+        &.active {
+            background: $green;
+            color: white;
+            font-weight: 600;
+        }
+    }
+    .tab-content {
+        width: 100%;
+        .tab-pane {
+            position: relative;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .tab-information {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: 35%;
+                color: white;
+                padding: 2rem 1.5rem;
+                background: $green;
+                height: fit-content;
+                min-height: 300px;
+                min-width: 300px;
+
+                position: absolute;
+                width: 20%;
+                @media(max-width: 992px){
+                    position: relative;
+                    width: 100%;
+                }
+                .title {
+                    font-size: 25px;
+                    margin-bottom: 1rem;
+                }
+                .sub-title {
+                    font-size: 17px;
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.2rem;
+                }
+
+                &.top-left {
+                    top: 0;
+                    left: 0;
+                }
+                &.top-right {
+                    top: 0;
+                    right: 0;
+                }
+                &.bottom-left {
+                    bottom: 0;
+                    left: 0;
+                }
+                &.bottom-right {
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+            &.active {
+                display: flex;
+                @media(max-width: 992px){
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    //Dynamic Map
+    #map_file {
+        display: none;
+    }
+}
+
+.address_section {
+    margin: 5rem 0rem;
+    .content-side {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        @media(max-width: 767px) {
+            margin-bottom: 4rem;
+        }
+    }
+    .image-side {
+
+    }
+}
+
+
+.map-container {
+    display: flex;
+    position: relative;
+}
+#map {
+    height: 700px;
+    width: 100%;
+
+    .active-feature {
+        color: #ff7800;
+        weight: 5;
+        opacity: 0.65;
+    }
+    .leaflet-control-attribution {
+        display: none !important;
+    }
+
+    //Moving Plus and Minus Zoom
+    .leaflet-left {
+        right: 0;
+        left: auto;
+        margin-right: 10px;
+    }
+    .leaflet-top, .leaflet-bottom {
+        z-index: 500;
+    }
+
+    .geojson-label {
+        background: #447469;
+        color: white;
+        font-size: 16px;
+        border: #447469;
+        box-shadow: none;
+
+        &:before {
+            display: none;
+        }
+    }
+    .leaflet-interactive {
+        &:focus {
+            outline: none;
+        }
+    }
+}
+#sidebar {
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 500;
+    background: $green; 
+    overflow: auto;
+    display: none; /* Initially hidden */
+    &.visible {
+        display: block;
+    }
+
+    @media(max-width: 992px){
+        width: 100%;
+        height: 50%;
+        top: auto;
+        bottom: 0;
+    }
+
+    #feature-info {
+        .feature_item {
+            margin-bottom: 10px;
+            color: white;
+            border: 3px solid #ffffff4a;
+            padding: 1rem;
+            .info-line {
+                margin-bottom: 13px;
+                h3 {
+                    font-size: 24px;
+                }
+            }
+            .btn-container {
+                display: flex;
+                gap: 10px;
+            }
+
+        }
+
+    }
+}

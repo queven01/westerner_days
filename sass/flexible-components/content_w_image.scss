@@ -1,0 +1,115 @@
+.content-w-image {
+    margin: 5rem 0rem;
+    @media(max-width: 992px){
+        margin: 2rem 0rem;
+    }
+    .row {
+        align-items: center;
+        justify-content: space-between;
+
+        .content-side {
+            @media(max-width: 767px){
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                order: 2;
+            }
+        }
+        .image-side {
+            position: relative;
+            @media(max-width:767px){
+                order: 1;
+
+                &.carousel {
+                    order: 2 !important; //Show Carousel after content always on mobile
+                }
+            }
+            .image {
+                height: 300px;
+                width: 100%;
+                object-fit: cover;
+            } 
+            &.one-image {
+                .image.one {
+                    width: 100%;
+                    height: 420px;
+                }
+                .image.two,
+                .image.three,
+                .image.four {
+                    display: none;
+                }
+            }
+            &.two-image {
+                .image {
+                    max-width: 450px;
+                }
+                .image.two {
+                    float: right;
+                    margin-top: -8rem;
+                    position: relative;
+                }
+                .image.three,
+                .image.four {
+                    display: none;
+                }
+
+                @media(max-width: 1200px){
+                    .image.two {
+                        float: none;
+                        margin-top: 5px;
+                        position: relative;
+                    }
+                }
+            }
+            &.three-image {
+                .image {
+                    max-width: 450px;
+                }
+                .image.two {
+                    float: right;
+                    margin-bottom: -8rem;
+                    margin-top: -8rem;
+                    position: relative;
+                    @media(max-width: 1200px){
+                        float: none;
+                        margin: 10px 0px;
+                    }
+                }
+                .image.four {
+                    display: none;
+                }
+            }
+            &.four-image {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 16px
+            }
+        }
+    }
+
+    //Flip Content
+    &.flip_content {
+        .image-side {
+            &.two-image {
+                .image.one {
+                    float: right;
+                }
+                .image.two {
+                    margin-left: 0;
+                    margin-top: -8rem;
+                }
+            }
+            &.three-image {
+                .image.one {
+                    float: right;
+                }
+                .image.two {
+                    float: left;
+                }
+                .image.three {
+                    float: right;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+//Fonts
+$defaultsize: 16px;
+$bodyfont: 'Open Sans', sans-serif;
+$headingFont: 'Roboto Slab', serif;
+$secondaryFont: 'Inter', sans-serif;
+$defaultfont: $bodyfont;
+
+input[type=submit].form_submit{
+    background: $pink;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+
+.bg {
+    &.orange {
+        background:$orange;
+    }
+    &.light-green {
+        background:$light-green;
+    }
+    &.green {
+        background:$green;
+    }
+    &.dark-green {
+        background:$pink;
+    }
+    &.blue {
+        background:$blue;
+    }
+}
+
+
+.small-container {
+    max-width: 836px;
+    margin: 0 auto;
+}
+
+.breadcrumbs {
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-size: 12px;
+    a {
+        text-decoration: none;
+        color: $blue;
+        &:active {
+            color: $green;
+        }
+    }
+    .current-item {
+        font-weight: 700;
+    }
+}

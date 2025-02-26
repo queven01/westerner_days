@@ -1,0 +1,72 @@
+.banner {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.banner .content {
+  z-index: 1;
+}
+.banner .title {
+  font-size: 2.063rem;
+  line-height: 1.4;
+  text-shadow: 0px 0px 2px black;
+}
+.banner:before {
+  content: "";
+  inset: 0;
+  background: black;
+  position: absolute;
+  opacity: 0.4;
+  z-index: 0;
+}
+.banner.home {
+  height: 700px;
+}
+.banner.home .hero-blocks {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.banner.inner {
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.banner.inner .content {
+  z-index: 1;
+}
+.banner.inner .hero-blocks {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  z-index: 0;
+}
+.banner.inner .title {
+  font-size: 3.313rem;
+  text-transform: uppercase;
+  line-height: 1.4;
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.4509803922);
+  margin-bottom: 4rem;
+}
+@media (max-width: 992px) {
+  .banner.inner .title {
+    font-size: 2rem;
+  }
+}
+.banner .content {
+  color: white;
+  position: relative;
+}
