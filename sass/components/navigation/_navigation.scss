@@ -441,7 +441,8 @@
 		color: $green !important;
 	}
 }
-.events-listing-page {
+.events-listing-page.v2 {
+
 	.event-tabs {
 		max-width: 800px;
 		margin: 20px auto;
@@ -450,9 +451,10 @@
 	
 	.tab-pane {
 		display: none;
+		min-height: 80vh;
 	}
 	
 	.tab-pane.active {
-		display: flex;
+		display: block;
 	}
 }

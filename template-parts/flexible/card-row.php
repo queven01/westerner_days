@@ -37,13 +37,21 @@
         <?php 
         if($cards_to_display):
             foreach($cards_to_display as $card): 
+                // print_r($card);
                 $id = $card->ID;
                 $image = get_the_post_thumbnail( $id, 'medium' );
-                $url = get_permalink( $id );
+                // $url = get_permalink( $id );
+                $target = "_self";
+                $url = "#";
+                if($display_category){
+                    $card_link = get_field( 'card_link', $id);
+                    $url = $card_link['url'] ?? "";
+                    $target = $card_link['target'] ?? "";
+                }
                 $excerpt = get_the_excerpt( $id );
                 ?>
                 <div class="col-12 col-md-6 col-lg-3 row-item">
-                    <a href="<?php echo $url; ?>" class="card">
+                    <a href="<?php echo $url; ?>" target="<?php echo $target; ?>" class="card">
                         <?php echo $image; ?>
                         <div class="content">
                             <h3 class="title"><?php echo $card->post_title; ?></h3>

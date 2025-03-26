@@ -45,7 +45,7 @@
 			<div class="row">
 				<div class="col-12 col-md-4">
 					<div class="quick-link-container">
-						<h4 class="title"><?php echo $navigation_title; ?></h4>
+						<?php if($navigation_title): echo '<h4 class="title">'. $navigation_title. '<h4>'; endif; ?>
 						<?php 
 							wp_nav_menu( array(
 								'theme_location'    => 'footer',
@@ -57,7 +57,7 @@
 				</div>
 				<div class="col-12 col-md-4">
 					<div class="contact-info">
-						<h4 class="title"><?php echo $contact_title; ?></h4>
+						<?php if($contact_title): echo '<h4 class="title">'. $contact_title. '<h4>'; endif; ?>
 						<ul>
 							<?php if($email): ?>
 								<li>Email: <a href="mailto:<?php echo $email;?>"><?php echo $email;?></a></li>
@@ -76,7 +76,7 @@
 				</div>
 				<div class="col-12 col-md-4">
 					<div class="footer-form-container">
-						<h4 class="title"><?php echo $form_title; ?></h4>
+						<?php if($form_title): echo '<h4 class="title">'. $form_title. '<h4>'; endif; ?>
 						<?php echo do_shortcode($form); ?>
 						<?php if($button): ?>
 							<a target="<?php echo $directions['target']?>" href="<?php echo $button['url'];?>" class="btn blue"><?php echo $button['title'];?></a>

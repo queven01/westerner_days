@@ -120,6 +120,14 @@
             text-align: center;
             color: white;
         }
+
+        //Constant Contact Form Overwrite
+        div.ctct-form-embed div.ctct-form-defaults {
+            padding: 0px; 
+        }
+        .ctct-form-embed .ctct-form-custom .ctct-form-button {
+            font-weight: 600;
+        }
     }
 
     //Lower Bar

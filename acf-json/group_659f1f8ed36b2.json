@@ -470,6 +470,13 @@
                 "operator": "==",
                 "value": "events"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "entertainments"
+            }
         ]
     ],
     "menu_order": 2,
@@ -484,5 +491,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1717530560
+    "modified": 1741116527
 }

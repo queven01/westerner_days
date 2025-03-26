@@ -61,6 +61,11 @@
                 "param": "post_type",
                 "operator": "!=",
                 "value": "teammembers"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "concessions"
             }
         ]
     ],
@@ -76,5 +81,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708452036
+    "modified": 1741118006
 }

@@ -38,6 +38,8 @@ class CustomPostType{
     private function createTaxonomies(){
         $this->buildTaxonomy('Event Category', 'Event Categories' , array('events'),array('hierarchical'=>true));
         $this->buildTaxonomy('Navigation Category', 'Navigation Categories' , array('events'),array('hierarchical'=>true));
+        $this->buildTaxonomy('Event Type', 'Event Types' , array('events'),array('hierarchical'=>true));
+
         $this->buildTaxonomy('Concession Category', 'Concession Categories' , array('concessions'),array('hierarchical'=>true));
         $this->buildTaxonomy('Venue Type', 'Venue Types' , array('venues'),array('hierarchical'=>true));
         $this->buildTaxonomy('Venue Capacity', 'Venue Capcities' , array('venues'),array('hierarchical'=>true));
@@ -176,7 +178,7 @@ $my_custom_posts = array(
     array(
         'singular'  => 'Concession',
         'plural'    => 'Concessions',
-        'public'    => true,
+        'public'    => false,
         'options'   => array(
             'menu_icon' => 'dashicons-food',
             'has_archive' => false,

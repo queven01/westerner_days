@@ -175,29 +175,18 @@ a.btn {
     }
 }
 
-.floating-button-container {
-    position: absolute;
+.floating-button-container { 
+    position: fixed;
     z-index: 999;
+ 
+    transform: rotate(90deg);
+    right: 0;
+    top: 40rem;
+    transform-origin: top right; 
+ 
     > a {
-        position: fixed;
-        right: 0;
-        -moz-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
-        -webkit-transform: rotate(90deg);
-        transform-origin: top right;
         @media(max-width: 992px){
             padding: 5px 20px;
-        }
-
-        &.one {
-            bottom: 15rem;
-            @media(max-width: 992px){
-                bottom: 13rem;
-            }
-        }
-        &.two {
-            bottom: 5rem;
         }
     }
 }

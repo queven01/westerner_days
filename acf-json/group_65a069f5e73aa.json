@@ -65,13 +65,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "post"
-            }
-        ],
-        [
+            },
             {
                 "param": "post_type",
-                "operator": "==",
-                "value": "venues"
+                "operator": "!=",
+                "value": "concessions"
             }
         ],
         [
@@ -101,5 +99,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708461602
+    "modified": 1741118055
 }

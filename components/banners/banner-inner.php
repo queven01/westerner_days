@@ -67,15 +67,15 @@
             <h1 class="title"><?php echo $main_title; ?></h1>
         </div>
     </div>
-    <img class="hero-blocks" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hero-blocks-inner.svg" alt="">
+    <img class="hero-blocks" src="<?php echo get_stylesheet_directory_uri(); ?>/images/Fireworks-Graphic.svg" alt="">
 </section>
 
 <?php get_template_part("template-parts/inner-button-nav");	?>
 
-<?php if(!is_page_template('templates/events-listing.php') && !is_page_template('templates/event-listing-custom.php') && !is_single()): ?>
+<?php if(!is_page_template('templates/events-listing.php') && !is_page_template('templates/events-listing-v2.php') && !is_single()): ?>
     <?php if($title || $description): ?>
 
-            <section class="intro-header">
+            <section class="intro-header"> 
                 <h2><?php echo $title; ?></h2> 
                 <p><?php echo $description; ?></p>
             </section>

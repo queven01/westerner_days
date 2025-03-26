@@ -5,6 +5,7 @@ jQuery(document).ready(function(){
     _navImageSwitch();
     _tabsforEventsListing();
     _countDown();
+    _isotopeFiltering()
     _tabChange();
 });
 
@@ -198,7 +199,6 @@ function _navImageSwitch(){
     
 } 
 
-
 //Tab Changes
 function _tabChange(){
 
@@ -273,5 +273,81 @@ function _countDown() {
                 }
             }, 1000);
         }
+    });
+}
+
+//Isotope Filtering
+function _isotopeFiltering() {
+    $(window).load(function(){
+        // init Isotope
+        var $grid = $('.grid').isotope({
+            itemSelector: '.event-card',
+            layoutMode: 'fitRows',
+            getSortData: {
+                title: '.title',
+            }
+        });
+
+        // $('.sort-by-select').on( 'change', function() {
+        //     var sortValue = this.value;
+
+        //     if(sortValue === 'title_2'){
+        //         sortValue = 'title';
+        //         $grid.isotope({ sortBy: sortValue, sortAscending : false });
+        //     } else {
+        //         $grid.isotope({ sortBy: sortValue, sortAscending : true });
+        //     }
+        // });
+    
+        // store filter for each group
+        
+        var filters = {};
+
+        $('.filter-by-select').on( 'change', function( event ) {
+
+            console.log($(this));
+            var filterValue = this.value;
+
+            $select = $( event.currentTarget );
+
+            filterGroup = $(this).attr('data-filter-group');
+
+            filters[filterGroup] = this.value;
+console.log(filters[filterGroup]);
+
+            var filterValue = concatValues( filters );
+console.log(filterValue);
+            $grid.isotope({ filter: filterValue });
+
+            checkResults();
+        });
+            
+        // flatten object by concatting values
+        
+        function concatValues( obj ) {
+            var value = '';
+            for ( var prop in obj ) {
+            value += obj[ prop ];
+            }
+            return value;
+        }
+
+        function checkResults(){
+            var elems = $grid.isotope('getFilteredItemElements');
+            if ( !elems.length ) { 
+                $('.no-results').show(); 
+                console.log('show');
+            } else { 
+                $('.no-results').hide(); 
+                console.log('hide');
+            } 
+        }
+
+        //Trigger Isotope Grid on Tab Change
+        $('.tab-nav a').on('click', function() {
+            setTimeout(function() {
+                $grid.isotope('layout'); // Force re-layout
+            }, 100); // Small delay helps with animations
+        }); 
     });
 }

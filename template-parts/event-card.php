@@ -26,26 +26,19 @@ foreach($posts as $card):
     $start = DateTime::createFromFormat( 'Y-m-d H:i:s', $event_start );
     $end = DateTime::createFromFormat( 'Y-m-d H:i:s', $event_end );
 
-    $month = $start->format( 'M' );
-    $day_s = $start->format( 'd' );
-    $day_e = $end->format( 'd' );
+    $day = $start->format( 'D' );
+    $hour_s = $start->format( 'g:i a' );
+    $hour_e = $end->format( 'g:i a' );
     ?> 
-
     <article id="post-<?php echo $id; ?>" class="card event-card <?php if($slide){echo 'swiper-slide';} else {echo 'col-12 col-lg-4';} ?>">
-        <a href="<?php echo esc_url( get_permalink($id) );?>" class="card-link event-container">
+       <a href="<?php echo esc_url( get_permalink($id) );?>" class="card-link event-container">
             <div class="content">
                 <div class="date">
                     <div class="month">
-                        <?php echo $month; ?>
+                        <?php echo $day; ?>
                     </div>
                     <div class="days">
-                        <?php 
-                        if($day_s == $day_e):
-                            echo $day_s;
-                        else:
-                            echo $day_s . '-' . $day_e;
-                        endif;
-                        ?>
+                        <?php echo $hour_s; ?> asdfa
                     </div>
                 </div>
                 <div class="info">

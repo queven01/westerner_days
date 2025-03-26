@@ -152,6 +152,9 @@ function westerner_days_scripts() {
 	//google font script    
 	wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Open+Sans:wght@400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap');
 	
+	// //Isotope local JS file
+	wp_enqueue_script( 'isotope-scripts', get_stylesheet_directory_uri() . '/js/isotope.pkgd.min.js', array('jquery') );
+	
 	//Swiper (slider) css file
 	wp_enqueue_style( 'swiper-style', get_stylesheet_directory_uri() . '/css/swiper-bundle.min.css', array() );
 
