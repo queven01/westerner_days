@@ -37,7 +37,6 @@ class CustomPostType{
     //set up taxonomies for custom types
     private function createTaxonomies(){
         $this->buildTaxonomy('Event Category', 'Event Categories' , array('events'),array('hierarchical'=>true));
-        $this->buildTaxonomy('Navigation Category', 'Navigation Categories' , array('events'),array('hierarchical'=>true));
         $this->buildTaxonomy('Event Type', 'Event Types' , array('events'),array('hierarchical'=>true));
 
         $this->buildTaxonomy('Concession Category', 'Concession Categories' , array('concessions'),array('hierarchical'=>true));

@@ -1,10 +1,11 @@
 <?php 
 // Template for all the cards used around the site.
 if ($args) {
-    $posts = $args['data'];
+    $event = $args['data'];
+    $extra_class = $event->is_extra_time ? 'extra-time' : '';
 }
-
-$fields = get_fields($post->ID);
+$id = $event->ID;
+$fields = get_fields($event->ID);
 $details = $fields['event_details'];
 $name = $details['name'] ?? '';
 $locations = $details['locations'] ?? '';
@@ -26,9 +27,11 @@ $event_categories = get_the_terms($id, 'event_category');
         <div class="content">
             <div class="date">
                 <div class="days">
-                    <?php 
-                        echo $hour_s
-                    ?>
+                    <?php if($extra_class){
+                        echo $event->time;
+                    } else {
+                        echo $hour_s;
+                    };?>
                 </div>
             </div>
             <div class="info">

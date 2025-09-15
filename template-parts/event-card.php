@@ -38,7 +38,7 @@ foreach($posts as $card):
                         <?php echo $day; ?>
                     </div>
                     <div class="days">
-                        <?php echo $hour_s; ?> asdfa
+                        <?php echo $hour_s; ?>
                     </div>
                 </div>
                 <div class="info">

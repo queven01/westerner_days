@@ -13,6 +13,8 @@ $description = $details['description'];
 
 $event_start = $details['event_start'];
 $event_end = $details['event_end'];
+$more_times = $details['more_times'];
+
 $start = DateTime::createFromFormat( 'Y-m-d H:i:s', $event_start );
 $end = DateTime::createFromFormat( 'Y-m-d H:i:s', $event_end );
 $locations = $details['locations'];
@@ -25,8 +27,8 @@ $month = $start->format( 'M' );
 $day_s = $start->format( 'd' );
 $day_e = $end->format( 'd' );
 $year = $end->format( 'Y' );
-$time_s = $start->format( 'h:ia' );
-$time_e = $end->format( 'h:ia' );
+$time_s = $start->format( 'g:i a' );
+$time_e = $end->format( 'g:i a' );
 
 $sponsors = $information['sponsors'];
 $similar_events = $information['similar_events'];
@@ -64,6 +66,16 @@ get_header();
                                 <p class="my-1"><?php echo $time['time'] ?></p>
                             <?php endforeach; else: ?>
                                 <p><?php echo $time_s . ' - ' . $time_e?></p>
+                                <?php if($more_times):?>
+                                    <h4>More Start Times</h4>
+                                    <?php foreach($more_times as $key=>$time){
+                                        $time = $time['date_time'];
+                                        echo '<span>'.$time.'</span> ';
+                                        if($key !== count($more_times)-1){
+                                            echo ' | ';
+                                        }
+                                    }?>
+                                <?php endif; ?>
                             <?php endif; ?>
                         </div>
                         <?php endif; ?>

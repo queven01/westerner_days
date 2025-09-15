@@ -24,6 +24,42 @@
             "field_type": "checkbox",
             "multiple": 0,
             "allow_null": 0
+        },
+        {
+            "key": "field_67eb3179813bc",
+            "label": "Navigation Start",
+            "name": "navigation_start",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "F j, Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_67eb318c813bd",
+            "label": "Navigation End",
+            "name": "navigation_end",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "F j, Y",
+            "first_day": 1
         }
     ],
     "location": [
@@ -44,5 +80,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741394346
+    "modified": 1743624819
 }
